@@ -25,7 +25,7 @@ public class DispatcherServlet extends GenericServlet {
     public void init() throws ServletException {
 
         super.init();
-        context = new ClassPathXmlApplicationContext("spring.xml")
+        context = new ClassPathXmlApplicationContext("spring.xml");
 
     }
 
@@ -35,7 +35,7 @@ public class DispatcherServlet extends GenericServlet {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
         /**
-         * /staff/add.do /login.do
+         * 访问路径如: /staff/add.do /login.do
          * staffController
          * public void add(HttpServletRequest request ,HttpServletResponse response){}
          */
@@ -48,7 +48,7 @@ public class DispatcherServlet extends GenericServlet {
             methodName = path.substring(index+1,path.indexOf(".do"));
         }else {
             beanName="selfController";
-            methodName=path.substring(0,path.indexOf(".do"))
+            methodName=path.substring(0,path.indexOf(".do"));
         }
 
 
