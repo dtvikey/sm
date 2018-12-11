@@ -30,4 +30,11 @@ public class DepartmentController {
 
 
     }
+
+    public void toAdd(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        request.getRequestDispatcher("../department_add.jsp").forward(request,response);
+
+    }
+
 }
