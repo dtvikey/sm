@@ -10,7 +10,8 @@ import java.util.Date;
 import java.util.List;
 @Service("staffService")
 public class StaffServiceImpl implements StaffService {
-@Autowired
+
+    @Autowired
     private StaffDao staffDao;
 
     public void add(Staff staff) {
