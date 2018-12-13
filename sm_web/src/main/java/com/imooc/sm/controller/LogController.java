@@ -1,6 +1,5 @@
 package com.imooc.sm.controller;
 
-import com.imooc.sm.entity.Department;
 import com.imooc.sm.entity.Log;
 import com.imooc.sm.service.LogService;
 import org.springframework.beans.factory.annotation.Autowired;
