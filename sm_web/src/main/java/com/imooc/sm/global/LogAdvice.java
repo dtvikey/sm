@@ -14,8 +14,10 @@ import javax.servlet.http.HttpSession;
 @Component
 @Aspect
 public class LogAdvice {
+
     @Autowired
     private LogService logService;
+
     @AfterReturning("execution(* com.imooc.sm.controller.*.*(..)) && !execution(* com.imooc.sm.controller.SelfController.*(..)) && !execution(* com.imooc.sm.controller.*.to*(..))")
     public void operationLog(JoinPoint joinPoint){
         Log log = new Log();
